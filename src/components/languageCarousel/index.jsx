@@ -117,7 +117,7 @@ const index = () => {
     };
   }, []);
   return (
-    <div className='bg-neutral-800 h-screen'>
+    <div className='bg-neutral-800 h-[150vh]'>
       <div className='bodyCarousel'>
         <div id='dragcontainer'>
           <div id='spincontainer'>
