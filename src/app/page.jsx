@@ -4,13 +4,15 @@ import React from 'react';
 import InitialScreen from '@/components/InitialScreen';
 import LanguageCarousel from '@/components/languageCarousel';
 import AboutMe from '@/components/aboutMe';
+import Experiences from '@/components/experiences';
 
 const Home = () => {
   return (
-    <div className='h-screen w-full bg-neutral-200'>
+    <div className='h-auto w-full '>
       <InitialScreen />
       <LanguageCarousel />
       <AboutMe />
+      <Experiences />
     </div>
   );
 };
