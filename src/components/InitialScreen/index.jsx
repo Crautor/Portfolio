@@ -7,7 +7,7 @@ import React from 'react';
 import actualAge from '@/utils/actualAge';
 
 
-const index = () => {
+const InitialScreen = () => {
   return (
     <div className='w-full h-screen md:p-0 xxs:p-2 bg-neutral-800 flex flex-col items-center justify-center'>
       <div className='flex flex-col gap-5'>
@@ -39,4 +39,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default InitialScreen;

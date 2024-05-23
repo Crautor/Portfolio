@@ -7,7 +7,7 @@ import imageArray from '@/utils/imageArray';
 // Styles
 import './style.css';
 
-const index = () => {
+const languageCarousel = () => {
   useEffect(() => {
     var tx = 0;
     var ty = 10;
@@ -63,4 +63,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default languageCarousel;

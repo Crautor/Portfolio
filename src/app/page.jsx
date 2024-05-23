@@ -5,7 +5,7 @@ import InitialScreen from '@/components/InitialScreen';
 import LanguageCarousel from '@/components/languageCarousel';
 import AboutMe from '@/components/aboutMe';
 import Experiences from '@/components/experiences';
-
+import Footer from '@/components/footer';
 const Home = () => {
   return (
     <div className='h-auto w-full '>
@@ -13,6 +13,7 @@ const Home = () => {
       <LanguageCarousel />
       <AboutMe />
       <Experiences />
+      <Footer />
     </div>
   );
 };
