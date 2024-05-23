@@ -3,7 +3,7 @@ import React from 'react';
 // Utils
 import spentTime from '@/utils/spentTime';
 
-const index = ({ job, company, startAt, endAt, description, current }) => {
+const experiencesCard = ({ job, company, startAt, endAt, description, current }) => {
   return (
     <div className='flex flex-col shadow-2xl p-5 hover:bg-white/80 hover:scale-105 duration-500 rounded-'>
       <p className='text-xl font-bold'>{job}</p>
@@ -24,4 +24,4 @@ const index = ({ job, company, startAt, endAt, description, current }) => {
   );
 };
 
-export default index;
+export default experiencesCard;
