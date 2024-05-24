@@ -52,13 +52,11 @@
   font-size: 50px;
   text-align: center;
 
-  filter: drop-shadow(0 0 0.75rem #ffffff40);
 
   -webkit-box-reflect: below 10px
     linear-gradient(transparent, transparent, #0005);
 }
 #dragcontainer #img:hover {
-  filter: drop-shadow(0 0 0.75rem #ffffff80);
 
   -webkit-box-reflect: below 10px
     linear-gradient(transparent, transparent, #0007);

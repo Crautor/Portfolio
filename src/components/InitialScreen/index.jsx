@@ -1,11 +1,10 @@
 import React from 'react';
 
-
-
+// Icons
+import { FaChevronDown } from 'react-icons/fa';
 
 // Components
 import actualAge from '@/utils/actualAge';
-
 
 const InitialScreen = () => {
   return (
@@ -24,9 +23,12 @@ const InitialScreen = () => {
         </div>
         <div className='flex md:w-96 xxs:w-full '>
           <h3 className='text-white xxs:text-sm md:text-base'>
-            i'm <span className='text-emerald-400 font-bold'>{actualAge()}</span>{' '}
+            i'm{' '}
+            <span className='text-emerald-400 font-bold'>{actualAge()}</span>{' '}
             years old, and i'm from{' '}
-            <span className='text-emerald-400 font-bold'>Toledo, PR, Brazil</span>{' '}
+            <span className='text-emerald-400 font-bold'>
+              Toledo, PR, Brazil
+            </span>{' '}
             currently studying{' '}
             <span className='text-emerald-400 font-bold'>
               Systems Analysis and Development
@@ -34,6 +36,10 @@ const InitialScreen = () => {
             at <span className='text-emerald-400 font-bold'>Biopark</span>
           </h3>
         </div>
+      </div>
+      <div className='animate-bounce flex justify-center flex-col items-center text-white text-xl absolute bottom-10'>
+        <p>Scroll down</p>
+        <FaChevronDown className='' />
       </div>
     </div>
   );
