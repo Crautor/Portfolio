@@ -15,7 +15,7 @@ const projects = () => {
         <div className='h-[1px] w-full xxs:hidden sm:flex border border-zinc-500'></div>
       </div>
 
-      <div className='flex flex-wrap overflow-auto w-full gap-5 p-20 items-center justify-center '>
+      <div className='flex flex-wrap overflow-auto w-full gap-5 md:p-20 xxs:p-5 items-center justify-center '>
         {projectsArray.map((item, index) => {
           return (
             <ProjectCards
