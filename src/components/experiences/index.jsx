@@ -10,10 +10,10 @@ const experiences = () => {
   return (
     <div className='flex flex-col h-auto pb-10 w-full'>
       <div className='flex  justify-center items-center p-5 w-full gap-5'>
+        <div className='h-[1px] w-full xxs:hidden sm:flex border border-zinc-500'></div>
         <h1 className='text-neutral-800 font-black xxs:text-3xl md:text-7xl'>
           Experiences<span className='text-emerald-400'>.</span>
         </h1>
-        <div className='h-[1px] w-full xxs:hidden sm:flex border border-zinc-500'></div>
       </div>
 
       <div className='flex flex-col gap-5 p-2 items-center justify-center '>

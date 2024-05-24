@@ -47,7 +47,7 @@ const languageCarousel = () => {
 
   }, []);
   return (
-    <div className='bg-neutral-800  h-[150vh] lg:block xxs:hidden '>
+    <div className='h-[150vh] lg:block xxs:hidden '>
       <div className='bodyCarousel '>
         <div id='dragcontainer'>
           <div id='spincontainer'>
