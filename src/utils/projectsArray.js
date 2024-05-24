@@ -13,7 +13,7 @@ export const projectsArray = [
     description: [
       'This is a personal portfolio that I made to show my skills and experiences.',
     ],
-    link: 'https://github.com/crautor',
+    link: 'https://github.com/Crautor/Portfolio',
     where: 'GitHub',
   },
   {
