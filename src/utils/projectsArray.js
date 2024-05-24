@@ -28,7 +28,7 @@ export const projectsArray = [
       'Resistors',
     ],
     description: ['Fry feeder project made for the fish-in os project.'],
-    link: 'https://github.com/Crautor/FISH-INOS/tree/main/Alimentador',
+    link: 'https://github.com/FISH-INOS/Alimentador-de-Alevinos',
     where: 'GitHub',
   },
   {
