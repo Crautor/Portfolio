@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div className='h-auto w-full '>
       <InitialScreen />
-     <!-- <LanguageCarousel />  -->
+      {/*<LanguageCarousel />*/}  
       <AboutMe />
       <Experiences />
       <Projects />
