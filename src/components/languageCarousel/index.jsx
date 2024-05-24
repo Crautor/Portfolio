@@ -9,11 +9,10 @@ import './style.css';
 
 const languageCarousel = () => {
   useEffect(() => {
-    var tx = 0;
-    var ty = 10;
+
     var radius = 450;
     const autorotate = true;
-    const rotatespeed = -60;
+    const rotatespeed = -80;
     const imgwidth = 200;
     const imgheight = 283;
 
