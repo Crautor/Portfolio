@@ -21,15 +21,15 @@ const projectCards = ({
       </div>
       <div className='flex flex-col gap-2'>
         <div className='flex items-center sm:justify-start xxs:justify-between gap-2'>
-          <h2 className='text-nowrap font-bold xxs:text-xl md:text-2xl'>{title}</h2>
+          <h2 className='text-nowrap font-bold xxs:text-lg md:text-2xl'>{title}</h2>
           <div className='h-[1px] w-full xxs:hidden sm:flex border border-zinc-500'></div>
 
           <a href={link}>
             {
               (where == 'GitHub' ? (
-                <FaGithub className='text-2xl' />
+                <FaGithub className='xxs:text-lg md:text-2xl' />
               ) : (
-                (where == 'GitLab' ? <FaGitlab className='xxs:text-xl md:text-2xl' /> : null)
+                (where == 'GitLab' ? <FaGitlab className='xxs:text-lg md:text-2xl' /> : null)
               ))
             }
           </a>
