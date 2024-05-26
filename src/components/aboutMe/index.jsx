@@ -24,7 +24,7 @@ const aboutMe = () => {
         <div className='lg:w-2/3 xxs:w-full flex flex-col gap-5 items-start xxs:justify-start md:justify-center px-5'>
           <h2 className='text-neutral-800 font-light md:text-xl xxs:text-sm '>
             As stated above, I am currently studying systems analysis and
-            development, I have always liked being connected to technology
+            development, I have always liked being connected to technology.
           </h2>
 
           <h2 className='text-neutral-800 font-light md:text-xl xxs:text-sm '>
