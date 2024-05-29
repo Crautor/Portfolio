@@ -47,7 +47,7 @@ const footer = () => {
               <FaGithub className='text-4xl' />
             </a>
             <a
-              href='https://www.https://www.instagram.com/crautor/'
+              href='https://www.instagram.com/crautor/'
               className=' hover:text-emerald-400 hover:scale-105 duration-500'
             >
               <BsInstagram className='text-4xl' />
