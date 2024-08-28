@@ -68,4 +68,19 @@ export const projectsArray = [
     link: 'https://gitlab.com/grupo01ads3/controledeestoque',
     where: 'GitLab',
   },
+  {
+    image: '/Image/Django.png',
+    title: 'Django API',
+    technologies: [
+      'Python',
+      'Django',
+      'Django-Cors-Headers',
+      'DjangoRestFramework',
+    ],
+    description: [
+      'This is a Django-based API project designed to manage user information.',
+    ],
+    link: 'https://github.com/Crautor/apiDjango',
+    where: 'GitHub',
+  },
 ];
