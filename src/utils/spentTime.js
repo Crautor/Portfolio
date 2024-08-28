@@ -11,22 +11,22 @@ export default function spentTime(startAt, endAt, current) {
   const years = Math.floor(months / 12);
 
   if (years > 0) {
-    return `${years} Ano${years > 1 ? 's' : ''} ${
+    return `${years} Year${years > 1 ? 's' : ''} ${
       months % 12 > 0
         ? months % 12 > 1
-          ? (months % 12) + ' Meses'
-          : (months % 12) + ' Mês'
+          ? (months % 12) + ' Months'
+          : (months % 12) + ' Month'
         : ''
     }`;
   } else if (months > 0) {
-    return `${months} ${months > 1 ? 'Meses' : 'Mês'}`;
+    return `${months} ${months > 1 ? 'Months' : 'Month'}`;
   } else if (days > 0) {
-    return `${days} Dia${days > 1 ? 's' : ''}`;
+    return `${days} Day${days > 1 ? 's' : ''}`;
   } else if (hours > 0) {
-    return `${hours} Hora${hours > 1 ? 's' : ''}`;
+    return `${hours} Hour${hours > 1 ? 's' : ''}`;
   } else if (minutes > 0) {
-    return `${minutes} Minuto${minutes > 1 ? 's' : ''}`;
+    return `${minutes} Minute${minutes > 1 ? 's' : ''}`;
   } else {
-    return `${seconds > 0 ? seconds : 1} Segundo${seconds > 1 ? 's' : ''}`;
+    return `${seconds > 0 ? seconds : 1} Second${seconds > 1 ? 's' : ''}`;
   }
 }
