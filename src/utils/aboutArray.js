@@ -1,14 +1,8 @@
 export const aboutWork = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'React',
-  'TailWind CSS',
-  'NextJS',
-  'NodeJS',
-  'Express',
-  'MongoDB',
-  'GitHub',
+  'Python',
+  'EMQX',
+  'TDengine',
+  'GitLab',
 ];
 
 export const aboutCollege = [
@@ -24,4 +18,8 @@ export const aboutCollege = [
   'Arduino',
   'Docker',
   'AWS',
+  'Python',
+  'Dart',
+  'Flutter',
+
 ];
