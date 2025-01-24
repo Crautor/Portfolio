@@ -32,7 +32,7 @@ export const projectsArray = [
     where: 'GitHub',
   },
   {
-    image: '/Image/CPA.png',
+    image: '/Image/Biopark.png',
     title: 'CPA Website',
     technologies: [
       'HTML',
@@ -50,7 +50,7 @@ export const projectsArray = [
     where: 'GitHub',
   },
   {
-    image: '/Image/InventoryManagement.png',
+    image: '/Image/Biopark.png',
     title: 'Inventory management',
     technologies: [
       'Java',
