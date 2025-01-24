@@ -3,6 +3,13 @@ export const aboutWork = [
   'EMQX',
   'TDengine',
   'GitLab',
+  'Azure DevOps',
+  'Docker',
+  'VueJS',
+  'TailwindCSS',
+  'NuxtJS',
+  'TypeScript',
+  'Django',
 ];
 
 export const aboutCollege = [
