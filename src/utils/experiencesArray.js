@@ -16,8 +16,9 @@ export const experiencesArray = [
     startAt: '2024-09-02',
     endAt: '-',
     description: [
-      'I am currently working on the development of monitoring systems for the company.',
-      'Used technologies: Python, EMQX, TDengine, GitLab.',
+      'I am currently developing a website that integrates with Grafana to retrieve and display graphics.',
+      'I have developed a Azure pipeline that automates the build process for Unity WebGL projects.',
+      'Used technologies: Docker, GitLab, VueJS, TailwindCSS, NuxtJS.',
     ],
     current: true,
   },
