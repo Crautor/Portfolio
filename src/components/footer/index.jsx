@@ -35,7 +35,7 @@ const footer = () => {
           </div>
           <div className='flex gap-5 justify-center items-center h-2/3 '>
             <a
-              href='https://www.linkedin.com/in/vitorhugodallanol/'
+              href='https://www.linkedin.com/in/vitordallanol/'
               className=' hover:text-emerald-400 hover:scale-105 duration-500'
             >
               <FaLinkedin className='text-4xl' />
