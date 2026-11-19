@@ -201,3 +201,45 @@
     transition: none;
   }
 }
+
+/* /love */
+.love {
+  background: radial-gradient(ellipse at 50% 35%, #3a1230 0%, #1a0a17 55%, #0f070d 100%);
+}
+
+.love-heart {
+  opacity: 0;
+  animation-name: float-up;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes float-up {
+  0% { transform: translateY(0) rotate(-10deg); opacity: 0; }
+  15% { opacity: 0.35; }
+  100% { transform: translateY(-110vh) rotate(15deg); opacity: 0; }
+}
+
+.love-card {
+  animation: card-in 1.2s var(--ease-out) backwards;
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(30px) rotate(-6deg); }
+}
+
+.love-beat {
+  animation: beat 1.4s ease-in-out infinite;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.25); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .love-heart { display: none; }
+  .love-card, .love-beat { animation: none; }
+}
