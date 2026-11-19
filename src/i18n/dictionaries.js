@@ -2,10 +2,11 @@
 // job or skill lives in src/content instead.
 export const dictionaries = {
   pt: {
+    // The page title is built from profile.headline in src/i18n/metadata.js.
     meta: {
-      title: 'Vitor Dallanol | Tech Lead e DevOps Engineer',
       description:
         'Tech lead e engenheiro DevOps em Toledo, PR. Arquitetura de nuvem, pipelines de CI/CD e desenvolvimento full stack.',
+      ogImageAlt: 'com capturas de tela de sites do portfólio',
     },
     nav: {
       work: 'Trabalhos',
@@ -59,13 +60,20 @@ export const dictionaries = {
       whatsapp: 'WhatsApp',
       backToTop: 'Voltar ao topo',
     },
+    notFound: {
+      title: 'Essa página não existe.',
+      pathLead: 'Nada foi encontrado em',
+      noPath: 'Nada foi encontrado neste endereço.',
+      hint: 'Pode ser um link antigo ou um erro de digitação.',
+      home: 'Ir para o início',
+    },
   },
 
   en: {
     meta: {
-      title: 'Vitor Dallanol | Tech Lead and DevOps Engineer',
       description:
         'Tech lead and DevOps engineer based in Toledo, Brazil. Cloud architecture, CI/CD pipelines and full stack development.',
+      ogImageAlt: 'with screenshots of websites from the portfolio',
     },
     nav: {
       work: 'Work',
@@ -118,6 +126,13 @@ export const dictionaries = {
       copied: 'Email copied',
       whatsapp: 'WhatsApp',
       backToTop: 'Back to top',
+    },
+    notFound: {
+      title: "This page doesn't exist.",
+      pathLead: 'Nothing was found at',
+      noPath: 'Nothing was found at this address.',
+      hint: 'It may be an old link or a typo.',
+      home: 'Go to the home page',
     },
   },
 };

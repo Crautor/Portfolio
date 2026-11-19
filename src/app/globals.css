@@ -72,6 +72,17 @@
     font-variation-settings: 'wdth' 84;
   }
 
+  /* 404: the status code in the narrowest cut. Sized by the viewport height
+     too, so the text under it stays on screen on short laptop displays. */
+  .notfound-code {
+    @apply font-display font-extrabold;
+    font-size: clamp(8rem, 62vw, 26rem);
+    font-size: clamp(8rem, min(62vw, 46svh), 26rem);
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+    font-variation-settings: 'wdth' 75;
+  }
+
   .contact-lead {
     @apply font-display font-semibold;
     font-size: clamp(1.75rem, 4.5vw, 3.25rem);

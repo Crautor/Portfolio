@@ -1,5 +1,5 @@
 import dallafit from '@/assets/projects/dallafit.webp';
-import bigode from '@/assets/projects/bigode.webp';
+import bigode from '@/assets/projects/du-bigode.webp';
 import jupudim from '@/assets/projects/jupudim.webp';
 import korvosys from '@/assets/projects/korvosys.webp';
 
