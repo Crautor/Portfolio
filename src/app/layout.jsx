@@ -1,23 +1,37 @@
-import { Inter } from 'next/font/google';
+import { Bricolage_Grotesque, Instrument_Sans } from 'next/font/google';
 import Script from 'next/script';
+
+import { pageMetadata } from '@/i18n/metadata';
+
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const display = Bricolage_Grotesque({
+  subsets: ['latin'],
+  axes: ['opsz', 'wdth'],
+  variable: '--font-display',
+  display: 'swap',
+});
 
-export const metadata = {
-  title: 'Vitor Dallanol',
-  description: 'Personal website of Vitor Dallanol',
+const text = Instrument_Sans({
+  subsets: ['latin'],
+  variable: '--font-text',
+  display: 'swap',
+});
+
+const { title, description } = pageMetadata('pt');
+
+export const metadata = { title, description };
+
+export const viewport = {
+  themeColor: '#0b1210',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang='pt-BR' className={`${display.variable} ${text.variable}`}>
       <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-VDWNT5LDGG"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
+        <Script src='https://www.googletagmanager.com/gtag/js?id=G-VDWNT5LDGG' strategy='afterInteractive' />
+        <Script id='gtag-init' strategy='afterInteractive'>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -26,7 +40,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className='font-sans'>{children}</body>
     </html>
   );
 }

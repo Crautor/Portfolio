@@ -1,24 +1,8 @@
-import React from 'react';
+import HomePage from '@/components/HomePage';
+import { pageMetadata } from '@/i18n/metadata';
 
-// Components
-import InitialScreen from '@/components/InitialScreen';
-// import LanguageCarousel from '@/components/languageCarousel';
-import AboutMe from '@/components/aboutMe';
-import Experiences from '@/components/experiences';
-import Footer from '@/components/footer';
-import Projects from '@/components/projects';
+export const metadata = pageMetadata('pt');
 
-const Home = () => {
-  return (
-    <div className='h-auto w-full '>
-      <InitialScreen />
-      {/*<LanguageCarousel />*/}  
-      <AboutMe />
-      <Experiences />
-      <Projects />
-      <Footer />
-    </div>
-  );
-};
-
-export default Home;
+export default function Page() {
+  return <HomePage locale='pt' />;
+}

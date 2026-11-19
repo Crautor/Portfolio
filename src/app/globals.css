@@ -1,3 +1,203 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --ink: #0b1210;
+  --surface: #111a17;
+  --line: #22302a;
+  --mist: #e4eee9;
+  --moss: #8ea399;
+  --accent: #34d399;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    background-color: var(--ink);
+    color: var(--mist);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* With hinting on, Chrome on Linux/Android drops the tiny period glyph at
+       some positions ("Next.js" renders as "Nextjs"). */
+    text-rendering: geometricPrecision;
+  }
+
+  ::selection {
+    background-color: var(--accent);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-8;
+  }
+
+  .section {
+    @apply py-24 md:py-28;
+  }
+
+  /* Bricolage Grotesque has a width axis; the narrow cut carries the headings. */
+  .hero-name {
+    @apply font-display font-extrabold;
+    font-size: clamp(4rem, 21vw, 8rem);
+    line-height: 0.86;
+    letter-spacing: -0.022em;
+    font-variation-settings: 'wdth' 80;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-name {
+      font-size: clamp(6rem, 9.5vw, 8.5rem);
+    }
+  }
+
+  .section-title {
+    @apply font-display font-extrabold;
+    font-size: clamp(2.75rem, 8vw, 5.25rem);
+    line-height: 0.95;
+    letter-spacing: -0.018em;
+    font-variation-settings: 'wdth' 84;
+  }
+
+  .contact-lead {
+    @apply font-display font-semibold;
+    font-size: clamp(1.75rem, 4.5vw, 3.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+
+  .aside-title {
+    @apply text-sm font-medium text-moss;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-accent text-ink hover:bg-mist;
+  }
+
+  .btn-ghost {
+    @apply border border-line text-mist hover:border-moss;
+  }
+
+  .nav-link {
+    @apply text-moss transition-colors hover:text-mist;
+  }
+
+  .text-link {
+    @apply inline-flex items-center gap-1.5 font-semibold underline decoration-line decoration-2 underline-offset-[6px] transition-colors hover:decoration-accent;
+  }
+
+  .bullet-list > li {
+    @apply relative pl-5;
+  }
+
+  .bullet-list > li::before {
+    content: '';
+    @apply absolute left-0 top-[0.7em] h-[5px] w-[5px] rounded-full bg-accent/70;
+  }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-ink;
+  }
+
+  /* Browser window around project screenshots */
+  .frame {
+    @apply overflow-hidden rounded-[14px] border border-line bg-surface;
+    box-shadow: 0 40px 80px -32px rgb(0 0 0 / 0.75);
+  }
+
+  .frame-bar {
+    @apply flex h-7 items-center gap-1.5 border-b border-line px-3;
+  }
+
+  .frame-dot {
+    @apply h-2 w-2 shrink-0 rounded-full bg-line;
+  }
+
+  .frame-shot {
+    @apply block h-auto w-full;
+  }
+}
+
+/* Hero: the live sites laid out like prints on a desk. Together with .rise
+   this is the page's only load animation. */
+.collage {
+  position: relative;
+  aspect-ratio: 1.1 / 1;
+}
+
+.collage::before {
+  content: '';
+  position: absolute;
+  inset: -12% -18%;
+  background: radial-gradient(closest-side, rgb(52 211 153 / 0.13), transparent);
+  pointer-events: none;
+}
+
+.collage-card {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: 64%;
+  z-index: calc(var(--index) + 1);
+  transform: rotate(var(--r));
+  transition: transform 0.5s var(--ease-out);
+  animation: deal 1s var(--ease-out) backwards;
+  animation-delay: calc(280ms + var(--index) * 90ms);
+}
+
+.collage-card:hover,
+.collage-card:focus-within {
+  z-index: 10;
+  transform: rotate(0deg) scale(1.04);
+}
+
+@keyframes deal {
+  from {
+    opacity: 0;
+    transform: translateY(48px) rotate(0deg) scale(0.96);
+  }
+}
+
+.rise {
+  animation: rise 0.9s var(--ease-out) backwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .rise,
+  .collage-card {
+    animation: none;
+  }
+
+  .collage-card {
+    transition: none;
+  }
+}
